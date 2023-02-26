@@ -6,10 +6,13 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: rgb(245, 220, 215);
+}
+
 *,
-*::before,
-*::after {
+::before,
+::after {
+  font-family: "Open Sans Condensed";
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }

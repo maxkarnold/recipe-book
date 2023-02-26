@@ -1,0 +1,14 @@
+<div class="h-screen container mx-auto">
+  <header class="flex flex-row items-center justify-between m-5">
+    <h1 class="text-4xl md:text-6xl">TABLE OF CONTENTS</h1>
+    <a routerLink="/create-recipe">
+      <fa-icon [icon]="plusIcon" class="text-2xl"></fa-icon>
+    </a>
+  </header>
+
+  <nav class="grid grid-cols-1 gap-x-2 gap-y-10 pt-5 sm:grid-cols-2 md:grid-cols-3">
+    <a *ngFor="let type of recipeTypes" [routerLink]="'/' + type.link"
+      class="flex justify-center  border border-black text-2xl h-72 w-72 mx-auto rounded-[50px] relative bg-cover bg-no-repeat lg:h-80 lg:w-80 xl:h-[22rem] xl:w-[22rem]"
+      [ngStyle]="{'background-image': 'url(./assets/' + type.backgroundImg + '.png)'}">{{type.name}}</a>
+  </nav>
+</div>

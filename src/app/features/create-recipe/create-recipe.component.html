@@ -1,0 +1,7 @@
+<div class="container mx-auto bg-yellow-200 h-screen p-5">
+  <form class="flex flex-col">
+    <app-form-field *ngFor="let item of formFields" [fieldData]="item"></app-form-field>
+    <button
+      class="transition duration-500 ease-in-out bg-primary text-white w-20 rounded-sm hover:bg-white hover:text-primary">Save</button>
+  </form>
+</div>
