@@ -1,14 +1,10 @@
-<div>
-  <label for="">{{fieldData.label}}</label>
+<label for="">{{fieldData.label}}</label>
 
-  <div [ngSwitch]="fieldData.fieldType">
-    <textarea *ngSwitchCase="'textarea'" [placeholder]="fieldData.placeholder" class="h-40 w-80 p-2"></textarea>
-    <input *ngSwitchCase="'text'" type="text" [placeholder]="fieldData.placeholder" class="p-2">
-    <input *ngSwitchCase="'number'" type="number" [placeholder]="fieldData.placeholder" class="w-16 p-2">
-    <p *ngSwitchDefault>
-      Failed ngSwitch
-    </p>
-  </div>
-
-
+<div [ngSwitch]="fieldData.fieldType">
+  <textarea *ngSwitchCase="'textarea'" [placeholder]="fieldData.placeholder" class="h-40 w-80 p-2"></textarea>
+  <input *ngSwitchCase="'text'" type="text" [placeholder]="fieldData.placeholder" class="p-2">
+  <input *ngSwitchCase="'number'" type="number" [placeholder]="fieldData.placeholder" class="w-16 p-2">
+  <p *ngSwitchDefault>
+    Failed ngSwitch
+  </p>
 </div>

@@ -9,7 +9,7 @@ export class CreateRecipeComponent implements OnInit {
   formFields: {label: string; placeholder: string; fieldType: string}[] = [
     {
       label: 'Title',
-      placeholder: 'Give your recipe a name',
+      placeholder: 'Name',
       fieldType: 'text'
     },
     {

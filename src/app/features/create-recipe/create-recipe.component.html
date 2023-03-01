@@ -1,7 +1,25 @@
-<div class="container mx-auto bg-yellow-200 h-screen p-5">
+<main class="container mx-auto h-screen p-5">
+  <h1 class="text-4xl md:text-6xl">CREATE RECIPE</h1>
   <form class="flex flex-col">
-    <app-form-field *ngFor="let item of formFields" [fieldData]="item"></app-form-field>
+    <!-- <app-form-field *ngFor="let item of formFields" [fieldData]="item"></app-form-field> -->
+    <input type="text" placeholder="Name">
+    <input type="text" placeholder="Category">
+    <fieldset class="flex">
+      <fieldset class="flex flex-col mr-4">
+        <label for="">Unit</label>
+        <input type="text" class="w-7">
+      </fieldset>
+      <fieldset class="flex flex-col mr-4">
+        <label for="">Measurement</label>
+        <input type="text" class="w-7">
+      </fieldset>
+      <fieldset class="flex flex-col">
+        <label for="">Ingredient</label>
+        <input type="text" class="flex-1">
+      </fieldset>
+    </fieldset>
+
     <button
       class="transition duration-500 ease-in-out bg-primary text-white w-20 rounded-sm hover:bg-white hover:text-primary">Save</button>
   </form>
-</div>
+</main>

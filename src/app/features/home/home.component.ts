@@ -14,32 +14,32 @@ export class HomeComponent implements OnInit {
     {
       name: 'BREAKFAST',
       link: '',
-      backgroundImg: 'breakfast'
+      backgroundImg: 'breakfast.jpg'
     },
     {
       name: 'LUNCH',
       link: '',
-      backgroundImg: 'lunch'
+      backgroundImg: 'lunch.png'
     },
     {
       name: 'DINNER',
       link: '',
-      backgroundImg: 'dinner'
+      backgroundImg: 'dinner.png'
     },
     {
       name: 'SNACKS',
       link: '',
-      backgroundImg: 'snack'
+      backgroundImg: 'snack.png'
     },
     {
       name: 'DESSERT',
       link: '',
-      backgroundImg: 'dessert'
+      backgroundImg: 'dessert.png'
     },
     {
       name: 'ALL',
       link: '',
-      backgroundImg: 'all'
+      backgroundImg: 'misc.png'
     },
   ];
 
