@@ -1,25 +1,42 @@
 <main class="container mx-auto h-screen p-5">
-  <h1 class="text-4xl md:text-6xl">CREATE RECIPE</h1>
+  <h1 class="text-4xl md:text-6xl mb-2">CREATE RECIPE</h1>
   <form class="flex flex-col">
-    <!-- <app-form-field *ngFor="let item of formFields" [fieldData]="item"></app-form-field> -->
-    <input type="text" placeholder="Name">
-    <input type="text" placeholder="Category">
-    <fieldset class="flex">
-      <fieldset class="flex flex-col mr-4">
-        <label for="">Unit</label>
-        <input type="text" class="w-7">
-      </fieldset>
-      <fieldset class="flex flex-col mr-4">
-        <label for="">Measurement</label>
-        <input type="text" class="w-7">
-      </fieldset>
-      <fieldset class="flex flex-col">
-        <label for="">Ingredient</label>
-        <input type="text" class="flex-1">
+    <input type="text" placeholder="Name" class="mb-2 p-1 max-w-lg rounded">
+    <input type="text" placeholder="Category" class="mb-2 p-1 max-w-lg rounded">
+    <h2 class="text-2xl mb-2">Ingredients</h2>
+
+    <fieldset class="table w-full">
+      <legend class="mb-2 table-header-group">
+        <label for="" class="table-cell text-justify pr-6">Unit</label>
+        <label for="" class="table-cell text-justify pr-5">Measurement</label>
+        <label for="" class="table-cell text-justify pr-2">Ingredient</label>
+      </legend>
+      <fieldset *ngFor="let ingredient of ingredients" class="flex mb-2 max-w-lg">
+        <input type="text" class="w-7 mr-4 rounded p-1" [value]="ingredient.unit">
+        <input type="text" class="w-20 mr-3 rounded p-1" [value]="ingredient.measurement">
+        <textarea rows="1" (keydown)="newIngredient($event)" [value]="ingredient.ingredient"
+          class="overflow-hidden resize-none rounded p-1 flex-grow"></textarea>
       </fieldset>
     </fieldset>
 
-    <button
-      class="transition duration-500 ease-in-out bg-primary text-white w-20 rounded-sm hover:bg-white hover:text-primary">Save</button>
+    <button type="button" class="w-20 mb-2 flex" (click)="newIngredient()">
+      <fa-icon [icon]="plusIcon"></fa-icon>
+      <span class="w-20">Ingredient</span>
+    </button>
+
+    <h2 class="text-2xl mb-2">Instructions</h2>
+
+    <fieldset *ngFor="let instruction of instructions" class="flex mb-2 max-w-lg">
+      <label for="" class="mr-2">{{instruction.number}}.</label>
+      <textarea #Instruction rows="1" maxlength="2048" class="resize-none flex-1 rounded p-1"
+        (keydown)="newInstruction($event)"></textarea>
+    </fieldset>
+    <button type="button" class="w-20 mb-2 flex" (click)="newInstruction()">
+      <fa-icon [icon]="plusIcon"></fa-icon>
+      <span class="w-20">Instruction</span>
+    </button>
+
+    <button type="button"
+      class="transition duration-500 ease-in-out bg-primary text-white w-20 rounded-sm hover:bg-white hover:text-primary py-1 text-lg">Save</button>
   </form>
 </main>
