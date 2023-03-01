@@ -1,5 +1,18 @@
 {
   "projects": {
     "default": "recipe-book-f66a2"
-  }
+  },
+  "targets": {
+    "recipe-book-f66a2": {
+      "hosting": {
+        "chef-bezos": [
+          "chefbezos"
+        ],
+        "default": [
+          "recipe-book-f66a2"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
